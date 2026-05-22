@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="images/icon-hero.png" alt="ULTR[A] · MFD" width="320" />
-</p>
-
 # ULTR[A] · MFD
 
 > Phosphor amber on iron. The MFD chrome you've been missing in VS Code.
