@@ -1,0 +1,89 @@
+{
+  "name": "ultra-mfd",
+  "displayName": "ULTR[A] · MFD",
+  "description": "Phosphor amber on iron. The MFD chrome you've been missing in VS Code. Five operator-pick accent variants (amber, phosphor-green, cyan, magenta, rust). Optional CRT character.",
+  "version": "0.1.0",
+  "publisher": "xultrax-web",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "amber",
+    "phosphor",
+    "monospace",
+    "terminal",
+    "mfd",
+    "cockpit",
+    "operator"
+  ],
+  "icon": "icons/icon.png",
+  "galleryBanner": {
+    "color": "#0F0E0C",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xultrax-web/ultra-mfd.git"
+  },
+  "homepage": "https://github.com/xultrax-web/ultra-mfd",
+  "bugs": {
+    "url": "https://github.com/xultrax-web/ultra-mfd/issues"
+  },
+  "extensionDependencies": [
+    "drcika.apc-extension"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "ULTR[A] · MFD · Amber",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-amber.json"
+      },
+      {
+        "label": "ULTR[A] · MFD · Amber + White Accent",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-amber-white-accent.json"
+      },
+      {
+        "label": "ULTR[A] · MFD · Green",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-green.json"
+      },
+      {
+        "label": "ULTR[A] · MFD · Green + White Accent",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-green-white-accent.json"
+      },
+      {
+        "label": "ULTR[A] · MFD · Cyan",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-cyan.json"
+      },
+      {
+        "label": "ULTR[A] · MFD · Cyan + White Accent",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-cyan-white-accent.json"
+      },
+      {
+        "label": "ULTR[A] · MFD · Rust",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-rust.json"
+      },
+      {
+        "label": "ULTR[A] · MFD · Rust + White Accent",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ultra-mfd-rust-white-accent.json"
+      }
+    ],
+    "configuration": {
+      "title": "ULTR[A] · MFD",
+      "properties": {}
+    }
+  }
+}

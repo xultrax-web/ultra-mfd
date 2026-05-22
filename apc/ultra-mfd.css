@@ -1,0 +1,192 @@
+/* ============================================================
+ * ULTR[A] · MFD · workbench chrome CSS
+ *
+ * Injected via Apc Customize UI++ (drcrh.apc-extension).
+ * Adds the chrome character the VS Code color API can't express:
+ * phosphor text-shadow on chrome panels, square corners, L-bracket
+ * section headers, dense padding, glowing cursor.
+ *
+ * Editor body code never receives a text-shadow — legibility wins
+ * over costume in long-dwell environments.
+ *
+ * v0.1 scope: one CSS file, always-on standard glow. CRT character
+ * (scanlines, flicker, save-pulse) lands in v0.2 with a real extension
+ * activation script that can manipulate body classes per user setting.
+ * ============================================================ */
+
+/* ---------- Color tokens (mirror the JSON theme) ---------- */
+
+:root {
+  --umfd-iron:           #0F0E0C;
+  --umfd-iron-2:         #15140f;
+  --umfd-iron-3:         #1c1a16;
+  --umfd-iron-4:         #2a251f;
+  --umfd-screen:         #0c0805;
+
+  --umfd-phosphor:       #FFAE3B;
+  --umfd-phosphor-bright:#FFB81E;
+  --umfd-phosphor-hot:   #FFD060;
+  --umfd-phosphor-dim:   #D97400;
+  --umfd-phosphor-deep:  #A06B0A;
+  --umfd-phosphor-glow:  rgba(255, 174, 59, 0.55);
+
+  --umfd-bad:            #FF6A3D;
+  --umfd-caution:        #E8B020;
+  --umfd-ok:             #FFD060;
+}
+
+/* ============================================================
+ * 1. PHOSPHOR GLOW on chrome panels
+ *    Three-layer text-shadow per ULTR[A] terminal recipe.
+ *    Chrome only — never on editor body code.
+ * ============================================================ */
+
+.monaco-workbench .part.statusbar,
+.monaco-workbench .part.statusbar .statusbar-item,
+.monaco-workbench .part.statusbar .statusbar-item .label,
+.monaco-workbench .part.statusbar .statusbar-item a,
+.monaco-workbench .monaco-breadcrumbs .monaco-breadcrumb-item,
+.monaco-workbench .pane > .pane-header,
+.monaco-workbench .pane > .pane-header .label,
+.monaco-workbench .composite.title h2,
+.monaco-workbench .composite.title .title-label,
+.monaco-workbench .panel-switcher-container .action-label,
+.monaco-workbench .part.titlebar .window-title,
+.monaco-workbench .activitybar .action-label.codicon,
+.monaco-workbench .activitybar-text-badge {
+  text-shadow:
+    0 0 1px rgba(255, 174, 59, 0.9),
+    0 0 4px rgba(255, 174, 59, 0.55),
+    0 0 18px rgba(255, 100, 0, 0.32) !important;
+}
+
+/* ============================================================
+ * 2. SQUARE PANEL CORNERS
+ *    Drake doctrine: geometrical. No rounded chrome.
+ * ============================================================ */
+
+.monaco-workbench .part .content,
+.monaco-workbench .panel,
+.monaco-workbench .sidebar,
+.monaco-workbench .auxiliarybar,
+.monaco-workbench .monaco-pane-view .pane,
+.monaco-workbench .monaco-list,
+.monaco-workbench .editor-container,
+.monaco-workbench .monaco-editor,
+.monaco-workbench .notifications-toasts .notification-toast,
+.monaco-workbench .monaco-button,
+.monaco-workbench .monaco-action-bar .action-label {
+  border-radius: 0 !important;
+}
+
+/* Hero surfaces keep 4px max (quick-open, dropdowns, menus) */
+.monaco-workbench .quick-input-widget,
+.monaco-workbench .monaco-dropdown,
+.monaco-workbench .monaco-menu-container,
+.monaco-workbench .monaco-hover {
+  border-radius: 4px !important;
+}
+
+/* ============================================================
+ * 3. L-BRACKET SECTION HEADERS
+ *    8×8 corner brackets on sidebar pane headers. Stamped, not
+ *    laser-etched per the existing Drake doctrine.
+ * ============================================================ */
+
+.monaco-workbench .pane > .pane-header {
+  position: relative;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+.monaco-workbench .pane > .pane-header::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  margin-top: -4px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid var(--umfd-phosphor-bright);
+  border-left: 1px solid var(--umfd-phosphor-bright);
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.monaco-workbench .pane > .pane-header::after {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  margin-top: -4px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid var(--umfd-phosphor-bright);
+  border-right: 1px solid var(--umfd-phosphor-bright);
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+/* Expanded pane — brighter brackets so the active section reads */
+.monaco-workbench .pane.expanded > .pane-header::before,
+.monaco-workbench .pane.expanded > .pane-header::after {
+  opacity: 0.85;
+}
+
+/* ============================================================
+ * 4. DENSITY · compressed chrome padding
+ *    Drake-dense per feedback_drake_design_language.md.
+ * ============================================================ */
+
+.monaco-workbench .pane > .pane-header {
+  height: 22px !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.monaco-workbench .monaco-list-row {
+  padding: 0 4px !important;
+}
+
+/* ============================================================
+ * 5. CURSOR · phosphor block with glow
+ * ============================================================ */
+
+.monaco-editor .cursor {
+  background-color: var(--umfd-phosphor-bright) !important;
+  color: var(--umfd-screen) !important;
+  box-shadow:
+    0 0 2px var(--umfd-phosphor-bright),
+    0 0 8px var(--umfd-phosphor-glow) !important;
+}
+
+/* ============================================================
+ * 6. SCROLLBAR · slim phosphor track
+ * ============================================================ */
+
+.monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(255, 174, 59, 0.18) !important;
+  border-radius: 0 !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider:hover {
+  background: rgba(255, 174, 59, 0.32) !important;
+}
+
+.monaco-scrollable-element > .scrollbar > .slider.active {
+  background: rgba(255, 174, 59, 0.5) !important;
+}
+
+/* ============================================================
+ * 7. TAB ACTIVE BORDER · phosphor underline (theme JSON already
+ *    sets activeBorderTop, but ensure 2px stroke for visibility)
+ * ============================================================ */
+
+.monaco-workbench .tabs-container .tab.active::after {
+  height: 2px !important;
+  background: var(--umfd-phosphor-bright) !important;
+  box-shadow: 0 0 6px var(--umfd-phosphor-glow);
+}
