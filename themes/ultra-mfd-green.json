@@ -472,11 +472,7 @@
     },
     {
       "name": "Invalid — bad / rust",
-      "scope": [
-        "invalid",
-        "invalid.illegal",
-        "invalid.deprecated"
-      ],
+      "scope": ["invalid", "invalid.illegal", "invalid.deprecated"],
       "settings": {
         "foreground": "#FF6A3D"
       }
@@ -495,9 +491,7 @@
     },
     {
       "name": "Markdown bold — stencil",
-      "scope": [
-        "markup.bold"
-      ],
+      "scope": ["markup.bold"],
       "settings": {
         "foreground": "#F0E8D5",
         "fontStyle": "bold"
@@ -505,59 +499,42 @@
     },
     {
       "name": "Markdown italic — body phosphor (no italic style)",
-      "scope": [
-        "markup.italic"
-      ],
+      "scope": ["markup.italic"],
       "settings": {
         "foreground": "#9FE633"
       }
     },
     {
       "name": "Markdown links — phosphor hot",
-      "scope": [
-        "markup.underline.link",
-        "string.other.link",
-        "constant.other.reference.link"
-      ],
+      "scope": ["markup.underline.link", "string.other.link", "constant.other.reference.link"],
       "settings": {
         "foreground": "#D6FF73"
       }
     },
     {
       "name": "Markdown inline code — cool white",
-      "scope": [
-        "markup.inline.raw",
-        "markup.fenced_code.block"
-      ],
+      "scope": ["markup.inline.raw", "markup.fenced_code.block"],
       "settings": {
         "foreground": "#B8C0D2"
       }
     },
     {
       "name": "Markdown quote — phosphor dim",
-      "scope": [
-        "markup.quote"
-      ],
+      "scope": ["markup.quote"],
       "settings": {
         "foreground": "#7AB527"
       }
     },
     {
       "name": "JSON keys — stencil",
-      "scope": [
-        "support.type.property-name.json",
-        "support.type.property-name"
-      ],
+      "scope": ["support.type.property-name.json", "support.type.property-name"],
       "settings": {
         "foreground": "#F0E8D5"
       }
     },
     {
       "name": "CSS properties — stencil",
-      "scope": [
-        "support.type.property-name.css",
-        "meta.property-name.css"
-      ],
+      "scope": ["support.type.property-name.css", "meta.property-name.css"],
       "settings": {
         "foreground": "#F0E8D5"
       }
@@ -577,30 +554,21 @@
     },
     {
       "name": "Git diff — added (ok)",
-      "scope": [
-        "markup.inserted",
-        "punctuation.definition.inserted"
-      ],
+      "scope": ["markup.inserted", "punctuation.definition.inserted"],
       "settings": {
         "foreground": "#D6FF73"
       }
     },
     {
       "name": "Git diff — removed (bad)",
-      "scope": [
-        "markup.deleted",
-        "punctuation.definition.deleted"
-      ],
+      "scope": ["markup.deleted", "punctuation.definition.deleted"],
       "settings": {
         "foreground": "#FF6A3D"
       }
     },
     {
       "name": "Git diff — changed (caution)",
-      "scope": [
-        "markup.changed",
-        "punctuation.definition.changed"
-      ],
+      "scope": ["markup.changed", "punctuation.definition.changed"],
       "settings": {
         "foreground": "#E8B020"
       }

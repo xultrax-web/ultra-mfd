@@ -23,9 +23,7 @@ Add to your VS Code `settings.json`:
 
 ```jsonc
 {
-  "apc.imports": [
-    "vscode-file://vscode-app/path/to/extension/apc/ultra-mfd.css"
-  ]
+  "apc.imports": ["vscode-file://vscode-app/path/to/extension/apc/ultra-mfd.css"],
 }
 ```
 
@@ -37,21 +35,21 @@ The exact path resolves via the marketplace install location. After install, run
 
 Four primary phosphor envelopes. Each ships in two flavors — the pure envelope, and the same envelope with white keyword/string accents for higher contrast.
 
-| Envelope | Pure | With white accents |
-|---|---|---|
+| Envelope            | Pure                  | With white accents                   |
+| ------------------- | --------------------- | ------------------------------------ |
 | **Amber** (default) | ULTR[A] · MFD · Amber | ULTR[A] · MFD · Amber + White Accent |
-| **Green** | ULTR[A] · MFD · Green | ULTR[A] · MFD · Green + White Accent |
-| **Cyan** | ULTR[A] · MFD · Cyan | ULTR[A] · MFD · Cyan + White Accent |
-| **Rust** | ULTR[A] · MFD · Rust | ULTR[A] · MFD · Rust + White Accent |
+| **Green**           | ULTR[A] · MFD · Green | ULTR[A] · MFD · Green + White Accent |
+| **Cyan**            | ULTR[A] · MFD · Cyan  | ULTR[A] · MFD · Cyan + White Accent  |
+| **Rust**            | ULTR[A] · MFD · Rust  | ULTR[A] · MFD · Rust + White Accent  |
 
 Body phosphor values:
 
-| Envelope | Body | Bright (pure variant) | Bright (white-accent variant) |
-|---|---|---|---|
-| Amber | `#FFAE3B` | `#FFB81E` | `#F0E8D5` |
-| Green | `#9FE633` | `#B8FF3D` | `#F0E8D5` |
-| Cyan | `#6BCFE8` | `#3DD6FF` | `#F0E8D5` |
-| Rust | `#E0704A` | `#FF8050` | `#F0E8D5` |
+| Envelope | Body      | Bright (pure variant) | Bright (white-accent variant) |
+| -------- | --------- | --------------------- | ----------------------------- |
+| Amber    | `#FFAE3B` | `#FFB81E`             | `#F0E8D5`                     |
+| Green    | `#9FE633` | `#B8FF3D`             | `#F0E8D5`                     |
+| Cyan     | `#6BCFE8` | `#3DD6FF`             | `#F0E8D5`                     |
+| Rust     | `#E0704A` | `#FF8050`             | `#F0E8D5`                     |
 
 Iron base (`#0F0E0C`), the bad semaphore (`#FF6A3D`), and the caution semaphore (`#E8B020`) stay constant across all eight themes for accessibility.
 
@@ -78,7 +76,7 @@ Set in VS Code:
   "editor.fontFamily": "'IBM Plex Mono', 'Cascadia Code', Consolas, monospace",
   "editor.fontSize": 13,
   "editor.fontWeight": "400",
-  "editor.fontLigatures": false
+  "editor.fontLigatures": false,
 }
 ```
 

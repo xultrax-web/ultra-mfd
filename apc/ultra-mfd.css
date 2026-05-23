@@ -17,22 +17,22 @@
 /* ---------- Color tokens (mirror the JSON theme) ---------- */
 
 :root {
-  --umfd-iron:           #0F0E0C;
-  --umfd-iron-2:         #15140f;
-  --umfd-iron-3:         #1c1a16;
-  --umfd-iron-4:         #2a251f;
-  --umfd-screen:         #0c0805;
+  --umfd-iron: #0f0e0c;
+  --umfd-iron-2: #15140f;
+  --umfd-iron-3: #1c1a16;
+  --umfd-iron-4: #2a251f;
+  --umfd-screen: #0c0805;
 
-  --umfd-phosphor:       #FFAE3B;
-  --umfd-phosphor-bright:#FFB81E;
-  --umfd-phosphor-hot:   #FFD060;
-  --umfd-phosphor-dim:   #D97400;
-  --umfd-phosphor-deep:  #A06B0A;
-  --umfd-phosphor-glow:  rgba(255, 174, 59, 0.55);
+  --umfd-phosphor: #ffae3b;
+  --umfd-phosphor-bright: #ffb81e;
+  --umfd-phosphor-hot: #ffd060;
+  --umfd-phosphor-dim: #d97400;
+  --umfd-phosphor-deep: #a06b0a;
+  --umfd-phosphor-glow: rgba(255, 174, 59, 0.55);
 
-  --umfd-bad:            #FF6A3D;
-  --umfd-caution:        #E8B020;
-  --umfd-ok:             #FFD060;
+  --umfd-bad: #ff6a3d;
+  --umfd-caution: #e8b020;
+  --umfd-ok: #ffd060;
 }
 
 /* ============================================================
